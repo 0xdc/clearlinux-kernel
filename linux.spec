@@ -118,6 +118,9 @@ Patch0131: nvme.patch
 Patch1001: 1001-WireGuard-fast-modern-secure-kernel-VPN-tunnel.patch
 #Serie1.end
 
+Patch2000: devm_ioremap_uc.patch
+Patch2001: intel_lpss_pci-ioremap_uc.patch
+
 %description
 The Linux kernel.
 
@@ -243,6 +246,9 @@ Linux kernel build files
 #Serie1.patch.start
 %patch1001 -p1
 #Serie1.patch.end
+
+%patch2000 -p1
+%patch2001 -p1
 
 cp %{SOURCE1} .
 
