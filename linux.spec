@@ -102,6 +102,7 @@ Patch1001: 1001-WireGuard-fast-modern-secure-kernel-VPN-tunnel.patch
 
 Patch2000: devm_ioremap_uc.patch
 Patch2001: intel_lpss_pci-ioremap_uc.patch
+Patch2002: hid_field_extract_192.patch
 
 %description
 The Linux kernel.
@@ -213,6 +214,7 @@ Linux kernel build files
 
 %patch2000 -p1
 %patch2001 -p1
+%patch2002 -p1
 
 cp %{SOURCE1} .
 

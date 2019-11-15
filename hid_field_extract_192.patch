@@ -1,0 +1,15 @@
+diff --git a/drivers/hid/hid-core.c b/drivers/hid/hid-core.c
+index 3af76624e4aa..a2f1a2c1f1b7 100644
+--- a/drivers/hid/hid-core.c
++++ b/drivers/hid/hid-core.c
+@@ -1313,8 +1313,8 @@ static u32 __extract(u8 *report, unsigned offset, int n)
+ u32 hid_field_extract(const struct hid_device *hid, u8 *report,
+ 			unsigned offset, unsigned n)
+ {
+-	if (n > 32) {
+-		hid_warn(hid, "hid_field_extract() called with n (%d) > 32! (%s)\n",
++	if (n > 192) {
++		hid_warn(hid, "hid_field_extract() called with n (%d) > 192! (%s)\n",
+ 			 n, current->comm);
+ 		n = 32;
+ 	}
